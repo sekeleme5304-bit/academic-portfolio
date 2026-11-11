@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive academic planner: add, complete and delete study tasks.">
+  <title>Academic Planner | Stephen Ekeleme - Academic Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html">Stephen<span>.</span>Ekeleme</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title">
+    <div class="container">
+      <h1>Academic Planner</h1>
+      <p>Plan assignments, readings and exams. Your tasks are saved in this browser.</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <section aria-label="Task planner">
+      <div class="container planner-layout">
+
+        <!-- Add task form -->
+        <aside class="card" aria-labelledby="add-title">
+          <h2 id="add-title" style="color:var(--indigo-700);margin-bottom:1rem;">Add a Task</h2>
+          <form id="task-form" novalidate>
+            <div class="field">
+              <label for="task-title">Task description *</label>
+              <input type="text" id="task-title" placeholder="e.g. Revise for Database exam" autocomplete="off">
+              <p class="error-msg" id="task-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="task-subject">Course / subject</label>
+              <input type="text" id="task-subject" placeholder="e.g. MIVA-CSC 106" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="task-due">Due date</label>
+              <input type="date" id="task-due">
+            </div>
+            <div class="field">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-dark" style="width:100%;">+ Add Task</button>
+          </form>
+        </aside>
+
+        <!-- Task list -->
+        <div>
+          <div class="stats" aria-live="polite">
+            <div class="stat"><strong id="stat-total">0</strong><span>Total</span></div>
+            <div class="stat"><strong id="stat-pending">0</strong><span>Pending</span></div>
+            <div class="stat"><strong id="stat-done">0</strong><span>Completed</span></div>
+          </div>
+
+          <div class="task-toolbar">
+            <div>
+              <label for="task-filter" style="display:inline;margin-right:.5rem;">Show:</label>
+              <select id="task-filter" style="width:auto;display:inline-block;">
+                <option value="all">All tasks</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-danger" id="clear-completed">Clear completed</button>
+          </div>
+
+          <ul class="task-list" id="task-list" aria-label="Your tasks"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="timetable-title">
+      <div class="container">
+        <h2 class="section-heading" id="timetable-title">Weekly Timetable</h2>
+        <p class="section-sub">My current semester lecture schedule.</p>
+        <div class="card table-wrap">
+          <table>
+            <caption>Lecture timetable</caption>
+            <thead>
+              <tr><th scope="col">Time</th><th scope="col">Monday</th><th scope="col">Tuesday</th><th scope="col">Wednesday</th><th scope="col">Thursday</th><th scope="col">Friday</th></tr>
+            </thead>
+            <tbody>
+                            <tr><th scope="row">8:00 - 10:00</th><td>Introduction to Web Technologies</td><td>Communication in English Language (II)</td><td>General Physics I(I)</td><td>Introduction to Problem-Solving</td><td>Elementary Mathematics (II)</td></tr>
+              <tr><th scope="row">10:00 - 12:00</th><td>General Physics Practical (II)</td><td>Nigerian Peoples and Culture</td><td>Technical Certification in Computing</td><td>Introduction to Web Technologies</td><td>Communication in English Language (II)</td></tr>
+              <tr><th scope="row">2:00 - 4:00</th><td>Lab Session</td><td>Study Group</td><td>Lab Session</td><td>Tutorial</td><td>Coding Club</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p>&copy; <span id="year">2026</span> Stephen Ekeleme. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>

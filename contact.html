@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Alex Johnson using the validated contact form.">
+  <title>Contact | Stephen Ekeleme - Academic Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a class="brand" href="index.html">Stephen<span>.</span>Ekeleme</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <p>Questions, collaborations or opportunities? I'd love to hear from you.</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <section aria-label="Contact information and form">
+      <div class="container contact-layout">
+
+        <aside class="card" aria-labelledby="details-title">
+          <h2 id="details-title" style="color:var(--indigo-700);margin-bottom:1rem;">Contact Details</h2>
+          <ul class="contact-list">
+            <li><span aria-hidden="true">&#128231;</span><span><strong>Email</strong><br><a href="mailto:alex.johnson@example.com">s.ekeleme5304@miva.edu.ng</a></span></li>
+            <li><span aria-hidden="true">&#128222;</span><span><strong>Phone</strong><br><a href="tel:+2348000000000">+234 703 575 9399</a></span></li>
+            <li><span aria-hidden="true">&#127979;</span><span><strong>University</strong><br>MIVA Open University</span></li>
+            <li><span aria-hidden="true">&#128279;</span><span><strong>Profiles</strong><br>
+              <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a> &bull;
+              <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">LinkedIn</a></span></li>
+          </ul>
+          <h3 style="margin-top:1.2rem;">Office Hours</h3>
+          <p>Mon - Fri, 2:00 PM - 5:00 PM</p>
+        </aside>
+
+        <div class="card">
+          <h2 style="color:var(--indigo-700);margin-bottom:1rem;">Send a Message</h2>
+          <div class="form-success" id="form-success" role="status" aria-live="polite"></div>
+
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name">
+              <p class="error-msg" id="name-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+              <p class="error-msg" id="email-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 08012345678 (digits only)" autocomplete="tel" inputmode="numeric">
+              <p class="error-msg" id="phone-error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="How can I help you?"></textarea>
+              <p class="error-msg" id="message-error" role="alert"></p>
+            </div>
+            <button type="submit" class="btn btn-dark">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p>&copy; <span id="year">2026</span> Stephen Ekeleme. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
